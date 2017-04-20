@@ -1,0 +1,44 @@
+import java.io.*;
+public class studentgrade
+{	
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        int age, m1,m2,m3,total,per;
+	String str;
+	System.out.println("Enter age");
+	age=Integer.parseInt(br.readLine());
+	System.out.println("Enter 3 subject marks");
+	m1=Integer.parseInt(br.readLine());
+	m2=Integer.parseInt(br.readLine());
+	m3=Integer.parseInt(br.readLine());
+	if(age<=15)
+	{	
+		total=m1+m2+m3;
+		per=total/3;
+		if(per>60)
+		str="A Grade";
+        else if (per>45 && per<60)
+		str="B Grade";	
+        else 
+		str="C Grade";
+	}
+	else
+	{
+		total=m1+m2+m3;
+		per=total/3;
+		if(per>70)
+		str="A Grade";
+		else if (per>61 && per<70)
+		str="B Grade";	
+        else 
+		str="C Grade";
+	}
+	System.out.println("Student Details is");
+	System.out.println("Age is " +age);
+    System.out.println("Total Marks is " +total);
+    System.out.println("Percentage is " +per);
+	System.out.println("Grade is " +str);
+}
+}
+
